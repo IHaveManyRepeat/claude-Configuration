@@ -1,0 +1,14 @@
+# Obsidian
+.obsidian/
+
+# Claude Code
+.claude/
+
+# Spec workflow
+.spec-workflow/
+
+# 排除其他目录，只跟踪「编程」文件夹
+计算机图书/
+llm-wiki/
+吴恩达 AI for Everyone.md
+CLAUDE.md
