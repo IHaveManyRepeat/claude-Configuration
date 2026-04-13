@@ -114,6 +114,8 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 - **HTML**：`E:\obsidian-computer\computer\编程\语言最佳实践\HTML.md`
 - **CSS**：`E:\obsidian-computer\computer\编程\语言最佳实践\CSS.md`
 ---
+## API 相关
+- 编写 API 接口时请遵循 OpenAPI 规范，规范见`E:\obsidian-computer\computer\编程\语言最佳实践\API最佳实践\OpenAPI.md`
 ## 自动化测试相关
 
 ## 重构相关
