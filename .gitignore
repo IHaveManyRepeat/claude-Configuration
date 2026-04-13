@@ -1,6 +1,7 @@
 # Ignore everything
 *
 
-# Only allow CLAUDE.md and .gitignore itself
-!CLAUDE.md
+# Allowlist
 !.gitignore
+!CLAUDE.md
+!编程/
