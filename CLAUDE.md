@@ -116,6 +116,8 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 ---
 ## API 相关
 - 编写 API 接口时请遵循 OpenAPI 规范，规范见`E:\obsidian-computer\computer\编程\语言最佳实践\API最佳实践\OpenAPI.md`
+- 前后端分离项目请遵循 Design-First 流程，通过 OpenAPI 契约自动生成前端类型、校验后端实现，确保接口一致性，规范见`E:\obsidian-computer\computer\编程\语言最佳实践\API最佳实践\前后端分离最佳实践.md`
+
 ## 自动化测试相关
 
 ## 重构相关
