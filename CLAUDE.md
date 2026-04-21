@@ -63,6 +63,16 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 > 反模式示例见：`~/.claude/EXAMPLES.md`
 
 ---
+## 任务标记完成前的自检要求
+> 详细规范见：`E:\obsidian-computer\computer\编程\软件开发方法论\AI辅助开发验证\任务完成验证检查清单.md`
+1. **文件真实存在** — `ls` 确认所有声称创建的文件实际存在，非空且非占位符
+2. **代码可达** — 新代码被主入口或业务模块引用，非孤立代码
+3. **编译零错误** — `tsc --noEmit` / `cargo check` / `go build` 零错误
+4. **测试真实有效** — 每个测试断言具体行为，无 `expect(true)` 或零断言
+5. **路径覆盖 100%** — 正常路径 + 异常路径 + 边界路径全覆盖
+6. **AC 逐项对应** — 每个 AC 条目有代码实现和测试覆盖
+7. **无回归** — 原有测试仍全部通过
+8. **无硬编码密钥** — 源码中无 API Key / Token / 密码
 
 ## 代码总要求
 1. 使用测试驱动开发方法
@@ -75,20 +85,6 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 核心循环：**Red（写失败测试）→ Green（写最少代码通过）→ Refactor（测试保护下重构）**
 > 测试用例生成方法：`E:\obsidian-computer\computer\编程\软件开发方法论\测试用例相关\测试用例生成方法.md`（等价类/边界值/正交表/场景法/对抗性测试）
 > 测试用例生成清单：`E:\obsidian-computer\computer\编程\软件开发方法论\测试用例相关\测试用例生成清单.md`（用例设计检查清单，覆盖完整性确认）
----
-## 架构相关
-> 详见：`E:\obsidian-computer\computer\编程\架构相关\架构原则.md`
-核心原则：
-- **依赖倒置 (DIP)** - 依赖抽象，不依赖具体
-- **开放封闭 (OCP)** - 对扩展开放，对修改封闭
-- **里氏替换 (LSP)** - 子类型可替换父类型
-- **接口隔离 (ISP)** - 接口小而专
-- **单一职责** - 每个模块只有一个变化原因
-- **关注点分离** - 不同层面分开
-- **DDD** - 用业务领域语言建模
-- **事件驱动** - 通过事件解耦
-- **六边形架构** - 核心与外部解耦
-- **熔断降级** - 防止级联故障
 ---
 ## 编程基本原则
 1. **命名自解释** - 所有命名（变量、函数、类、接口等）必须清晰表达意图，无需注释说明
@@ -118,6 +114,11 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 - 编写 API 接口时请遵循 OpenAPI 规范，规范见`E:\obsidian-computer\computer\编程\语言最佳实践\API最佳实践\OpenAPI.md`
 - 前后端分离项目请遵循 Design-First 流程，通过 OpenAPI 契约自动生成前端类型、校验后端实现，确保接口一致性，规范见`E:\obsidian-computer\computer\编程\语言最佳实践\API最佳实践\前后端分离最佳实践.md`
 
+## 特定场景编码规范
+### 前端
+> 详见：`E:\obsidian-computer\computer\编程\特定情况下的编码要求\前端编码规范.md`
+**核心要求**：按钮防重复点击（loading锁/节流/防抖）、表单防重复提交、列表key用业务ID、异步竞态处理（AbortController）、事件监听器清理、条件渲染安全访问。
+---
 ## 自动化测试相关
 
 ## 重构相关
