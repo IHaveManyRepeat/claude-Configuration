@@ -113,11 +113,12 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 ## API 相关
 - 编写 API 接口时请遵循 OpenAPI 规范，规范见`E:\obsidian-computer\computer\编程\语言最佳实践\API最佳实践\OpenAPI.md`
 - 前后端分离项目请遵循 Design-First 流程，通过 OpenAPI 契约自动生成前端类型、校验后端实现，确保接口一致性，规范见`E:\obsidian-computer\computer\编程\语言最佳实践\API最佳实践\前后端分离最佳实践.md`
+- **错误信息双轨制**：后端返回 `userMessage`（用户友好提示）+ `debugMessage`（技术调试信息）；前端展示 `userMessage`，`debugMessage` 仅记日志；生产环境不返回 `debugMessage`
 
 ## 特定场景编码规范
 ### 前端
 > 详见：`E:\obsidian-computer\computer\编程\特定情况下的编码要求\前端编码规范.md`
-**核心要求**：按钮防重复点击（loading锁/节流/防抖）、表单防重复提交、列表key用业务ID、异步竞态处理（AbortController）、事件监听器清理、条件渲染安全访问。
+**核心要求**：按钮防重复点击（loading锁/节流/防抖）、表单防重复提交、列表key用业务ID、异步竞态处理（AbortController）、事件监听器清理、条件渲染安全访问、提示语必须用户友好（禁止暴露技术细节）。
 ---
 ## 自动化测试相关
 
